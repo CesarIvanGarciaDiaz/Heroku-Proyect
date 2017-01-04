@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Concepto de pago:</strong>
+  <%= @movement.concepto_de_pago %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @movement.reference %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @movement.date %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @movement.detail %>
+</p>
+
+<%= link_to 'Edit', edit_movement_path(@movement) %> |
+<%= link_to 'Back', movements_path %>
