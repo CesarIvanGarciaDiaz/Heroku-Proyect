@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-     belongs_to :movements
+   has_many :movements
 end

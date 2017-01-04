@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+
+
+# https://github.com/Nerian/bootstrap-datepicker-rails
+gem 'bootstrap-datepicker-rails'
+
 gem 'bootstrap-material-design'
 gem 'material_icons'
 gem 'rails',        '5.0.0.1'

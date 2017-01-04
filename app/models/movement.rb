@@ -1,4 +1,4 @@
 class Movement < ApplicationRecord
-   belongs_to :accounts
-   has_many :categories
+   belongs_to :account
+   belongs_to :categories
 end

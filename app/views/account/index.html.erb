@@ -1,0 +1,9 @@
+<h1>Seleccione una cuenta a administrar</h1>
+
+<% name = Account.all %>
+<% name.each do |t| %>
+<div class="btn-raised btn-success caja"><%= t.name %></div>
+<% end %>
+
+<br>
+<%= link_to "Crear Cuenta", account_new_path, class:"estilo_letra" %>

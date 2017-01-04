@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'account/index'
+
+  get 'account/new'
+  post 'account/new'
+  
   resources :movements
   get 'sessions/new'
 
@@ -16,7 +21,6 @@ Rails.application.routes.draw do
     get    '/login',   to: 'sessions#new'
     post   '/login',   to: 'sessions#create'
     delete '/logout',  to: 'sessions#destroy'
-
 
 
 end
