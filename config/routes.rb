@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+  resources :accounts
   get 'account/index'
+
 
   get 'account/new'
   post 'account/new'
-  
+  get '/account/movements', to: "movements#index"
   resources :movements
   get 'sessions/new'
+
 
   # get 'users/new'
 

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Seleccione una cuenta a administrar</h1>
+
+<% name = Account.all %>
+<% name.each do |t| %>
+<div class="btn-raised  btn-primary caja">
+  <!--# <%= t.name %> -->
+  <%= link_to t.name, "/account/movements"%>
+</div>
+<% end %>
+
+<br>
+<!-- <%= link_to "Crear Cuenta", account_new_path, class:"estilo_letra" %> -->
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.name %></td>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+<br>
+
+<%= link_to 'New Account', new_account_path, class:'btn btn-info' %>

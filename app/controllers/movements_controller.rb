@@ -1,6 +1,6 @@
 class MovementsController < ApplicationController
   before_action :set_movement, only: [:show, :edit, :update, :destroy]
-  
+
 
   # GET /movements
   # GET /movements.json
@@ -16,6 +16,7 @@ class MovementsController < ApplicationController
   # GET /movements/new
   def new
     @movement = Movement.new
+    
   end
 
   # GET /movements/1/edit
