@@ -2,7 +2,7 @@
 
 <div class="col-md-15">
   <div class="well bs-component">
-<%= form_for(account) do |f| %>
+<%= form_for(user_accounts_path) do |f| %>
   <% if account.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
@@ -21,7 +21,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit class:'btn btn-primary'%>
+    <%= f.submit class:'btn btn-primary', value:"Guardar"%>
   </div>
 <% end %>
 </div>

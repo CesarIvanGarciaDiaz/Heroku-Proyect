@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  resources :accounts
-  get 'account/index'
+  # resources :accounts
+  # get 'account/index'
 
 
-  get 'account/new'
-  post 'account/new'
-  get '/account/movements', to: "movements#index"
-  resources :movements
+  # get 'account/new'
+  # post 'account/new'
+  # get '/account/movements', to: "movements#index"
+
+  resources :users do
+    resources :accounts do 
+      resources :movements, shallow: true
+    end
+  end
+
   get 'sessions/new'
 
 

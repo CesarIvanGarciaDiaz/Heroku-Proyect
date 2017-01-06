@@ -9,7 +9,6 @@ Category.create!(name: "partida virtual")
 Category.create!(name: "inversion")
 
 Account.create!(name: "Banco")
-
 Account.create!(name: "Paypal")
 
 # 99.times do |n|

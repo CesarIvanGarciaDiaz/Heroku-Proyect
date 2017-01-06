@@ -2,7 +2,7 @@
 <div class="col-md-15">
   <div class="well bs-component">
 <form class="form-horizontal">
-  <%= form_for(movement) do |f| %>
+  <%= form_for(user_account_movements_path ) do |f| %>
     <% if movement.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(movement.errors.count, "error") %> prohibited this movement from being saved:</h2>
