@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 20170104180046) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "nombre"
-    t.string "(+/-/n)"
+    t.string "name"
   end
 
   create_table "financial_statements", force: :cascade do |t|

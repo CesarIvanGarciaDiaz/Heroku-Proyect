@@ -7,6 +7,8 @@ User.create!(name:  "César Iván Gárcia Díaz",
 Account.create!(name: "Banco")
 Account.create!(name: "Caja Chica")
 
+Category.create!(name: "partida virtual")
+Category.create!(name: "inversion")
 # 99.times do |n|
 #   name  = Faker::Name.name
 #   email = "example-#{n+1}@railstutorial.org"
