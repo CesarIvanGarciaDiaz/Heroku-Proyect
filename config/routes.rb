@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :accounts
   get 'account/index'
-
+resources :categories
 
   get 'account/new'
   post 'account/new'

@@ -1,38 +1,21 @@
+
 <p id="notice"><%= notice %></p>
+<h1>Seleccione la cuenta a administrar</h1>
 
-<h1>Seleccione una cuenta a administrar</h1>
+<div class="boton_creado">
+<%= link_to 'New Account', new_account_path, class:'btn btn-success' %>
+</div>
 
-<% name = Account.all %>
-<% name.each do |t| %>
-<div class="btn-raised  btn-primary caja">
-  <!--# <%= t.name %> -->
-  <%= link_to t.name, "/account/movements"%>
+<% @accounts.each do |account| %>
+<div class="social">
+
+<div class='front'>
+<%= account.name%>
+</div>
+<div class='back'>
+<%= link_to account.name, "/account/movements",class:"btn btn",style:"width:200px;height:50px;margin-top:-3px;margin-left:0px;padding:15% 25%; background-color: white;"%>
+<%= link_to 'Edit', edit_account_path(account) ,class:"btn btn-raised btn-success" %>
+<%= link_to 'Destroy', account,class:"btn btn-raised btn-warning " ,style:"background-color: #F44336!important;", method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
 </div>
 <% end %>
-
-<br>
-<!-- <%= link_to "Crear Cuenta", account_new_path, class:"estilo_letra" %> -->
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @accounts.each do |account| %>
-      <tr>
-        <td><%= account.name %></td>
-        <td><%= link_to 'Show', account %></td>
-        <td><%= link_to 'Edit', edit_account_path(account) %></td>
-        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-<br>
-
-<%= link_to 'New Account', new_account_path, class:'btn btn-info' %>
