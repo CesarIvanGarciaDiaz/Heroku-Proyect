@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
+      post  'account',  to: 'accounts#index'
+      post  '/users/1/accounts/new',  to: 'accounts#create'
   get 'sessions/new'
 
 

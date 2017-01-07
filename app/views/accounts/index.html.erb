@@ -16,4 +16,4 @@
 <!--  -->
 <br>
 
-<%= link_to 'New Account', new_user_account_path, class:'btn btn-info' %>
+<%= link_to 'New Account', new_user_account_path(session[:user_id]) , class:'btn btn-info' %>
