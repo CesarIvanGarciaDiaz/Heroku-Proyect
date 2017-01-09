@@ -16,11 +16,12 @@ class MovementsController < ApplicationController
   # GET /movements/new
   def new
     @movement = Movement.new
-    
+puts "*"*1000
   end
 
   # GET /movements/1/edit
   def edit
+     @movement = Movement.find(params[:id])
   end
 
   # POST /movements
